@@ -1,0 +1,11 @@
+.zoom {
+    background-size: 95%; /* Initial background size */
+    /* transition: background-size 2s; */
+}
+
+.zoom:hover {
+    background-size: cover;
+    transition: background-size 5s;
+    transition: all;
+    background-color: #0c0a0a;
+}
