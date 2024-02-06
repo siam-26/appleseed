@@ -1,0 +1,60 @@
+.hero-style{
+  background-repeat: no-repeat !important;
+  /* background-position: right !important; */
+  background-position: 130% -70% !important;
+}
+
+.banner-img{
+  transform: translate(-20%, -15%);
+  animation: rotating 50.5s infinite linear;
+}
+
+@keyframes rotating{
+  0%{
+    transform: translate(-20%, -15%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-20%, -15%) rotate(360deg);
+  }
+}
+
+
+.hero-icon{
+    position: relative;
+    right: -5px;
+    /* width: 100%; */
+    /* height: 60px; */
+    box-sizing: border-box;
+    /* border-radius: 50%; */
+    transition: .5s;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+
+
+  .hero-icon-btn{
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+    /* margin-left: 10px; */
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    /* color: #; */
+    transition: .5s;
+  }
+  
+  .hero-icon .hero-icon-btn:nth-child(1){
+    top: -50%;
+    opacity: 0;
+  }
+  
+  .hero-icon:hover .hero-icon-btn:nth-child(1){
+    top: 50%;
+    opacity: 1;
+    color: #fff;
+  }
+  
+  .hero-icon:hover .hero-icon-btn:nth-child(2){
+    top: 150%;
+    opacity: 0;
+  }

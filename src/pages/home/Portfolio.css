@@ -1,11 +1,154 @@
-.zoom {
-    background-size: 95%; /* Initial background size */
-    /* transition: background-size 2s; */
+
+
+.wrapper{
+    margin: 40px 0 0px auto;
+    height: 550px;
 }
 
-.zoom:hover {
+.child{
+    height: 100%;
+    width: 100%;
     background-size: cover;
-    transition: background-size 5s;
-    transition: all;
-    background-color: #0c0a0a;
+    transition: all 1.1s;
+    overflow: hidden;
 }
+
+.parent{
+    overflow: hidden;
+    position: relative;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.content-style{
+  /* top: 100px; */
+  transition: all .3s;
+}
+
+.content-style-text{
+  color: transparent;
+  transition: all .3s;
+}
+
+.parent:hover .child{
+    transform: scale(1.2);
+}
+
+.parent:hover .content-style{
+  top: 50px;
+}
+
+.parent:hover .content-style-text{
+  color: gray;
+}
+
+.arrow-style{
+  top: 20px;
+  transition: all 1.1s;
+  background-color: brown;
+  height: 200px;
+}
+
+.arrow-style:hover .another {
+  top: -10px;
+
+}
+
+.arrow-parent{
+  position: relative;
+  right: 13px;
+  box-sizing: border-box;
+  transition: .5s;
+  overflow: hidden;
+  border-radius: 25px;
+  bottom: 520px;
+  height: 50px;
+  z-index: 2;
+}
+
+.arrow{
+  position: absolute;
+  top: 35%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #979797;
+  transition: .5s;
+  height: 100px;
+}
+
+.parent .arrow:nth-child(1){
+  top: -35%;
+  opacity: 0;
+}
+
+.parent:hover .arrow:nth-child(1){
+  top: 35%;
+  opacity: 1;
+  color: #c7ee01;
+}
+
+.parent:hover .arrow:nth-child(2){
+  top: 150%;
+  opacity: 0;
+}
+
+
+
+/* Moving Text */
+.container {
+    display: flex;
+    align-items: center;
+    /* height: 100vh; */
+    height: 1rem;
+    overflow: hidden;
+    /* width: 48%; */
+  }
+
+  .containerDots {
+    display: flex;
+    align-items: center;
+    /* height: 100vh; */
+    height: 1rem;
+    overflow: hidden;
+  }
+  
+  .scroll {
+    white-space: nowrap;
+    margin: 0 2em;
+  }
+  
+  .scroll div {
+    display: flex;
+    gap: 1em;
+  }
+  
+  .scroll p {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(105, 105, 105);
+    margin-bottom: 0;
+    line-height: 10px;
+  }
+  
+  .RightToLeft {
+    animation: RightToLeft 20s infinite linear;
+    display: flex;
+    align-items: center;
+  }
+
+  .RightToLeftDot {
+    animation: RightToLeft 80s infinite linear;
+    display: flex;
+    align-items: center;
+  }
+  
+  @keyframes  RightToLeft {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
